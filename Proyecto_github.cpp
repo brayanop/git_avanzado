@@ -28,7 +28,6 @@ int main() {
     srand(20);
     int user_g = 0;
     int computer_g = 0;
-    
     while (user_g < 3 && computer_g < 3) {
         string jugador;
         cout << "Elige piedra, papel o tijeras (Escribe): ";
@@ -57,11 +56,20 @@ int main() {
         cout << "****************************************************" << endl;
     }
 
-    if (user_g == 3) {
-        cout << ".........WINNER........." << endl;
-    } else {
-        cout << "........GAME OVER......." << endl;
+    string letraW = 'Winner';
+    string letraF = 'Game Over';
+    if (user_g ==3){
+    cout << letraW;
+    for (int i = 0; i < 5; ++i) {
+        cout << "*";
     }
-
+    cout << " ";
+    } else {
+    cout << letraF;
+    for (int i = 0; i < 5; ++i) {
+        cout << "*";
+    }
+    cout << endl;
+	}
     return 0;
 }
